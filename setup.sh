@@ -3,12 +3,25 @@ set -e
 
 echo "==> Setting up Grasp"
 
-# ── .env ─────────────────────────────────────────────────────────────────────
-if [ ! -f .env ]; then
-  cp .env.example .env
+# ── API key ───────────────────────────────────────────────────────────────────
+if [ -f .env ] && grep -q "ANTHROPIC_API_KEY=sk-" .env 2>/dev/null; then
+  echo "==> API key already configured, skipping"
+else
   echo ""
-  echo "  ✎  Created .env — add your Anthropic API key:"
-  echo "     ANTHROPIC_API_KEY=sk-ant-..."
+  echo "You need an Anthropic API key to use Grasp."
+  echo "Get one free at: https://console.anthropic.com → API Keys → Create Key"
+  echo ""
+  while true; do
+    read -rsp "Paste your Anthropic API key (starts with sk-ant-...): " key
+    echo ""
+    if [[ "$key" == sk-ant-* ]]; then
+      break
+    fi
+    echo "  That doesn't look right — the key should start with sk-ant-"
+    echo "  Press Ctrl+C to exit and try again later."
+  done
+  echo "ANTHROPIC_API_KEY=$key" > .env
+  echo "  ✓ Key saved to .env (stays on your machine, never uploaded)"
   echo ""
 fi
 

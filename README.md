@@ -54,17 +54,7 @@ git clone https://github.com/YOUR_USERNAME/grasp.git
 cd grasp
 ```
 
-**2. Add your API key**
-
-In the `grasp` folder, find the file called `.env.example`. Make a copy of it named `.env` (no `.example`). Open `.env` in any text editor and replace `your_key_here` with your actual key:
-
-```
-ANTHROPIC_API_KEY=sk-ant-api03-...
-```
-
-Save and close.
-
-**3. Run the setup script**
+**2. Run the setup script**
 
 Open a terminal, navigate to the `grasp` folder, and run:
 
@@ -72,7 +62,9 @@ Open a terminal, navigate to the `grasp` folder, and run:
 bash setup.sh
 ```
 
-This installs all dependencies automatically. It takes 1–2 minutes.
+The script will ask you to paste your Anthropic API key — it won't be shown on screen as you type. It validates the format and saves it locally. Nothing leaves your machine.
+
+This installs all dependencies automatically. It takes 1–2 minutes total.
 
 > **Mac tip:** To open a terminal in the grasp folder, right-click the folder in Finder → "New Terminal at Folder" (or open Terminal and type `cd ` then drag the folder in).
 
