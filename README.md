@@ -1,8 +1,8 @@
 # Grasp
 
-**Turn any academic paper into an interactive knowledge graph you can actually learn from.**
+**Turn any academic paper into an interactive, queryable knowledge graph you can actually learn from.**
 
-Upload a PDF. Grasp maps out every concept you need to understand, shows you how they connect, and lets you ask questions about any of them in plain English. It also generates a narrative "learning path" — a guided story that walks you from zero to understanding the paper's contribution, in order.
+Upload a PDF. Grasp maps out every concept you need to understand into 'nodes', shows you how they connect, and lets you ask questions about any of them in plain English. It also generates a narrative learning path based on the nodes, which walks you from zero to understanding the paper's contribution, in order. Everything runs locally on your machine.
 
 ---
 
@@ -14,8 +14,6 @@ Upload a PDF. Grasp maps out every concept you need to understand, shows you how
 ---
 
 ## Before you start
-
-You need three things installed on your computer. If you already have them, skip ahead.
 
 ### 1. Python 3.12
 Check if you have it:
@@ -38,7 +36,7 @@ Grasp uses Claude to analyze papers. You'll need a free account and an API key.
 
 1. Go to [console.anthropic.com](https://console.anthropic.com) and sign up
 2. Click **API Keys** in the left sidebar → **Create Key**
-3. Copy the key (it starts with `sk-ant-...`) — you'll paste it in a moment
+3. Copy the key (it starts with `sk-ant-...`) 
 
 > **Cost:** Analyzing one paper typically costs $0.30–$0.80 in API credits. Anthropic gives new accounts free credits to start.
 
@@ -153,7 +151,7 @@ If you only have 3.13+, the setup script handles it — but 3.14 is not supporte
 
 ---
 
-## How it works (the short version)
+## How it works
 
 When you upload a paper, five AI agents run in sequence:
 
