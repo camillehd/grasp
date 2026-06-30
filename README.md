@@ -20,7 +20,7 @@ Check if you have it:
 ```
 python3.12 --version
 ```
-If you get a version number, you're good. If not, install it:
+If you don't get a version number, install it:
 - **Mac:** `brew install python@3.12` (requires [Homebrew](https://brew.sh) — paste that one-liner and follow the prompts)
 - **Windows/Linux:** Download from [python.org](https://www.python.org/downloads/)
 
